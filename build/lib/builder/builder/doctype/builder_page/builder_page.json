@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:page_name",
+ "creation": "2023-01-09 15:20:33.274204",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "content_tab",
+  "published",
+  "page_name",
+  "column_break_nasy",
+  "route",
+  "dynamic_route",
+  "section_break_ujsp",
+  "blocks",
+  "draft_blocks",
+  "preview",
+  "scripting_tab",
+  "page_data_script",
+  "settings_tab",
+  "meta_column",
+  "page_title",
+  "meta_description",
+  "meta_image",
+  "set_meta_tags"
+ ],
+ "fields": [
+  {
+   "fieldname": "page_name",
+   "fieldtype": "Data",
+   "label": "Page Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "ignore_xss_filter": 1,
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "blocks",
+   "fieldtype": "JSON",
+   "label": "Blocks"
+  },
+  {
+   "fieldname": "preview",
+   "fieldtype": "Attach Image",
+   "label": "Page Preview"
+  },
+  {
+   "fieldname": "page_title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "scripting_tab",
+   "fieldtype": "Tab Break",
+   "label": "Scripting"
+  },
+  {
+   "description": "data.events = frappe.get_list(\"Event\")\n<br>\n<b>Note:</b> Each key value of data should be a list.",
+   "fieldname": "page_data_script",
+   "fieldtype": "Code",
+   "label": "Page Data Script",
+   "options": "Python"
+  },
+  {
+   "fieldname": "content_tab",
+   "fieldtype": "Tab Break",
+   "label": "Content"
+  },
+  {
+   "fieldname": "column_break_nasy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Map route parameters into form variables. Example <code>/profile/&lt;user&gt;</code>",
+   "fieldname": "dynamic_route",
+   "fieldtype": "Check",
+   "label": "Dynamic Route"
+  },
+  {
+   "fieldname": "section_break_ujsp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "draft_blocks",
+   "fieldtype": "JSON",
+   "label": "Draft Blocks"
+  },
+  {
+   "fieldname": "settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Settings"
+  },
+  {
+   "fieldname": "meta_column",
+   "fieldtype": "Column Break",
+   "label": "Meta"
+  },
+  {
+   "fieldname": "meta_image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "set_meta_tags",
+   "fieldtype": "Button",
+   "label": "Add Custom Meta Tags"
+  },
+  {
+   "fieldname": "meta_description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-28 15:51:19.458047",
+ "modified_by": "Administrator",
+ "module": "Builder",
+ "name": "Builder Page",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Website Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "page_title"
+}
